@@ -37,6 +37,15 @@ namespace Urho
 			OnGraphicsCreated ();
 		}
 
+        [DllImport (Consts.NativeImport, CallingConvention = CallingConvention.Cdecl)]
+        internal static extern IntPtr Graphics_GetDevice(IntPtr handle);
+
+        public IntPtr GetDevice()
+        {
+            Runtime.ValidateRefCounted(this);
+            return Graphics_GetDevice(handle);
+        }
+
 		[DllImport (Consts.NativeImport, CallingConvention = CallingConvention.Cdecl)]
 		internal static extern int Graphics_GetType (IntPtr handle);
 

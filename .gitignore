@@ -39,3 +39,15 @@ project.lock.json
 /ProjectTemplates/VSIX/ProjectTemplates
 /Tests/Playgrounds/Playgrounds.NetCoreApp/CoreData.pak
 /Tests/Playgrounds/Playgrounds.NetCoreApp/Urho3D.log
+*.lastbuildstate
+*.tlog
+*.log
+*.cache
+*.resfiles
+*.intermediate
+/BackgroundRenderer/Debug
+/BackgroundRenderer/Release
+/BackgroundRenderer/x64
+/Debug/BackgroundRenderer
+/Release/BackgroundRenderer
+/x64

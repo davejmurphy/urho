@@ -139,6 +139,10 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\BackgroundRenderer\BackgroundRenderer.vcxproj">
+      <Project>{c92ff0bc-0fbc-4003-8180-a5afd586a48f}</Project>
+      <Name>BackgroundRenderer</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\..\Bindings\UWP\Urho.UWP.csproj">
       <Project>{3b881c69-a1ac-410a-a633-ea9fca4a760c}</Project>
       <Name>Urho.UWP</Name>

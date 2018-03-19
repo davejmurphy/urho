@@ -12076,6 +12076,11 @@ Graphics_Graphics (Urho3D::Context * context)
 	return WeakPtr<Graphics>(new Graphics(context));
 }
 
+DllExport void *
+Graphics_GetDevice(Urho3D::Graphics *_target)
+{
+    return _target->GetDevice();
+}
 
 DllExport void
 Graphics_SetExternalWindow (Urho3D::Graphics *_target, void * window)
@@ -13735,6 +13740,11 @@ Texture2D_GetType (Urho3D::Texture2D *_target)
 	return (_target->GetType ()).Value ();
 }
 
+DllExport void *
+Texture2D_GetGPUObject(Urho3D::Texture2D * _target)
+{
+    return _target->GetGPUObject();
+}
 
 DllExport const char *
 Texture2D_GetTypeName (Urho3D::Texture2D *_target)

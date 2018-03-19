@@ -37,7 +37,16 @@ namespace Urho.Urho2D
 			OnTexture2DCreated ();
 		}
 
-		[DllImport (Consts.NativeImport, CallingConvention = CallingConvention.Cdecl)]
+        [DllImport(Consts.NativeImport, CallingConvention = CallingConvention.Cdecl)]
+        internal static extern IntPtr Texture2D_GetGPUObject(IntPtr handle);
+
+        public IntPtr GetGPUObject()
+        {
+            Runtime.ValidateRefCounted(this);
+            return Texture2D_GetGPUObject(handle);
+        }
+
+        [DllImport (Consts.NativeImport, CallingConvention = CallingConvention.Cdecl)]
 		internal static extern int Texture2D_GetType (IntPtr handle);
 
 		private StringHash UrhoGetType ()
